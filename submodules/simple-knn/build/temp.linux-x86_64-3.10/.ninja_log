@@ -1,0 +1,7 @@
+# ninja log v5
+4	5850	1698369403883169200	/usr/project/gaussian-splatting_diffusion_vit_depth/submodules/simple-knn/build/temp.linux-x86_64-3.10/simple_knn.o	32e06caaeebed1d9
+4	12402	1698369410428655100	/usr/project/gaussian-splatting_diffusion_vit_depth/submodules/simple-knn/build/temp.linux-x86_64-3.10/ext.o	e5f6293277dca10
+5	30667	1698369428699027200	/usr/project/gaussian-splatting_diffusion_vit_depth/submodules/simple-knn/build/temp.linux-x86_64-3.10/spatial.o	3343686b0ba555d3
+17	6045	1700130994243050800	/usr/project/gaussian-splatting_final/submodules/simple-knn/build/temp.linux-x86_64-3.10/simple_knn.o	9451cb9cc0c233de
+17	12677	1700131000868767500	/usr/project/gaussian-splatting_final/submodules/simple-knn/build/temp.linux-x86_64-3.10/ext.o	470b93442a6103f2
+17	30817	1700131019013136200	/usr/project/gaussian-splatting_final/submodules/simple-knn/build/temp.linux-x86_64-3.10/spatial.o	6867d8b10568e961

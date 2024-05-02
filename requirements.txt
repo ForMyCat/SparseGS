@@ -1,0 +1,10 @@
+opencv-python
+diptest==0.6.1
+transformers
+diffusers
+torchmetrics
+matplotlib
+scipy
+plyfile
+recordclass
+scikit-image
