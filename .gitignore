@@ -1,2 +1,4 @@
 data
 output
+/BoostingMonocularDepth/pix2pix/checkpoints/mergemodel/res101.pth
+/BoostingMonocularDepth/pix2pix/checkpoints/mergemodel/latest_net_G.pth
