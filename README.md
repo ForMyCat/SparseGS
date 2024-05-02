@@ -10,11 +10,10 @@
 
 ---------------------------------------------------
 <p align="center" >
-  <figure>
-        <img src="https://github.com/ForMyCat/SparseGS-Real-Time-360-Sparse-View-Synthesis-using-Gaussian-Splatting/blob/main/static/image/vid_garden.mp4" alt="demo" width="500" />
-  </figure>
+  <video width="700" height="300" playsinline controls loop autoplay muted>
+    <source src="demo.mp4" type="video/mp4">
+  </video>
 </p>
-
 
 ## Environment Setups
 Conda environment:
