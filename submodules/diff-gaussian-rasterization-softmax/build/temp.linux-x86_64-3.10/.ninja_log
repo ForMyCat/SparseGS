@@ -1,0 +1,12 @@
+# ninja log v5
+5	1976	1709539920350714300	/usr/project/gaussian-splatting_final/submodules/diff-gaussian-rasterization-softmax/diff-gaussian-rasterization-softmax/build/temp.linux-x86_64-3.10/cuda_rasterizer/forward.o	5f1bab3c603f5da1
+5	1981	1709539920354974000	/usr/project/gaussian-splatting_final/submodules/diff-gaussian-rasterization-softmax/diff-gaussian-rasterization-softmax/build/temp.linux-x86_64-3.10/cuda_rasterizer/backward.o	2300593d4a77efe7
+6	4827	1709539923200296700	/usr/project/gaussian-splatting_final/submodules/diff-gaussian-rasterization-softmax/diff-gaussian-rasterization-softmax/build/temp.linux-x86_64-3.10/cuda_rasterizer/rasterizer_impl.o	a307dc8ab41e9438
+6	14290	1709539932655152300	/usr/project/gaussian-splatting_final/submodules/diff-gaussian-rasterization-softmax/diff-gaussian-rasterization-softmax/build/temp.linux-x86_64-3.10/ext.o	9bdd6be92e23c263
+6	33554	1709539951924339300	/usr/project/gaussian-splatting_final/submodules/diff-gaussian-rasterization-softmax/diff-gaussian-rasterization-softmax/build/temp.linux-x86_64-3.10/rasterize_points.o	b842e6d35ec15888
+22	1713	1709541093182309500	/usr/project/gaussian-splatting_final/submodules/diff-gaussian-rasterization-softmax/diff-gaussian-rasterization-softmax/build/temp.linux-x86_64-3.10/cuda_rasterizer/forward.o	5f1bab3c603f5da1
+19	1734	1714627235752142000	/usr/project/SparseGS/submodules/diff-gaussian-rasterization-softmax/build/temp.linux-x86_64-3.10/cuda_rasterizer/forward.o	133be196bf53d0f9
+19	1741	1714627235760040900	/usr/project/SparseGS/submodules/diff-gaussian-rasterization-softmax/build/temp.linux-x86_64-3.10/cuda_rasterizer/backward.o	e1b729b55befc783
+19	4352	1714627238370770300	/usr/project/SparseGS/submodules/diff-gaussian-rasterization-softmax/build/temp.linux-x86_64-3.10/cuda_rasterizer/rasterizer_impl.o	8e4133389a0d470f
+19	12943	1714627246953939700	/usr/project/SparseGS/submodules/diff-gaussian-rasterization-softmax/build/temp.linux-x86_64-3.10/ext.o	4650e75808f582d8
+20	26199	1714627260213977300	/usr/project/SparseGS/submodules/diff-gaussian-rasterization-softmax/build/temp.linux-x86_64-3.10/rasterize_points.o	c7c785c827e5ede5

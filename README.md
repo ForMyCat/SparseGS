@@ -42,7 +42,7 @@ When dealing with extreme sparse cases, COLMAP will fail to reconstruct a pointc
 We also provide some preprocessed data with various numbers of input view. You may download them [here](https://drive.google.com/drive/folders/1VVkkPw_ubQ0A3052ErDK4PyDgT9hqfKJ?usp=sharing). Please cite our project if you find these data useful.
 
 ## Getting Monocular-estimated Depth Maps
-You can use any monocular depth estimation model to generate your gt depth maps as long as they are saved as .npy files. In this project, we have integrated "S. Mahdi H. Miangoleh, BoostingMonocularDepth, (CVPR 2022)". 
+You can use any monocular depth estimation model to generate your gt depth maps as long as they are saved as .npy files. In this project, we have integrated "S. Mahdi H. Miangoleh, BoostingMonocularDepth, (CVPR 2022)". If you would like to use this, please download the model checkpoint **latest_net_G.pth** [here](https://drive.google.com/drive/folders/1VVkkPw_ubQ0A3052ErDK4PyDgT9hqfKJ?usp=sharing) and put it in [BoostingMonocularDepth/pix2pix/checkpoints/mergemodel](BoostingMonocularDepth/pix2pix/checkpoints/mergemodel). Then, run:
 
 ```
 python3 prepare_gt_depth.py <path-to-image-folder> <path-to-depth-save-folder>
@@ -53,10 +53,10 @@ After preping the depth maps, your input folder should look like:
 ```
 e.g.
 data -- kitchen_12 -- images -- DSCF0656.JPG
-                  |         |
-                  |         -- DSCF0657.JPG
-                  |         |
-                  |         -- ......
+                  |          |
+                  |          -- DSCF0657.JPG
+                  |          |
+                  |          -- ......
                   |
                   |
                   -- depths -- DSCF0656.npy
