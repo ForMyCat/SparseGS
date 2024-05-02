@@ -4,7 +4,7 @@
 
 [![Paper](https://img.shields.io/badge/cs.CV-Paper-b31b1b?logo=arxiv&logoColor=red)](https://arxiv.org/abs/2312.00206)
 [![Project Page](https://img.shields.io/badge/SparseGS-Website-blue?logo=googlechrome&logoColor=blue)](https://formycat.github.io/SparseGS-Real-Time-360-Sparse-View-Synthesis-using-Gaussian-Splatting/)
-<!-- [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FVITA-Group%2FFSGS&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com) -->
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FForMyCat%2FSparseGS&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 
 
 
@@ -42,7 +42,7 @@ When dealing with extreme sparse cases, COLMAP will fail to reconstruct a pointc
 We also provide some preprocessed data with various numbers of input view. You may download them [here](https://drive.google.com/drive/folders/1VVkkPw_ubQ0A3052ErDK4PyDgT9hqfKJ?usp=sharing). Please cite our project if you find these data useful.
 
 ## Getting Monocular-estimated Depth Maps
-You can use any monocular depth estimation model to generate your gt depth maps as long as they are saved as .npy files. In this project, we have integrated "S. Mahdi H. Miangoleh, BoostingMonocularDepth, (CVPR 2022)". If you would like to use this, please download the model checkpoint **latest_net_G.pth** [here](https://drive.google.com/drive/folders/1VVkkPw_ubQ0A3052ErDK4PyDgT9hqfKJ?usp=sharing) and put it in [BoostingMonocularDepth/pix2pix/checkpoints/mergemodel](BoostingMonocularDepth/pix2pix/checkpoints/mergemodel). Then, run:
+You can use any monocular depth estimation model to generate your gt depth maps as long as they are saved as .npy files. In this project, we have integrated "S. Mahdi H. Miangoleh, BoostingMonocularDepth, (CVPR 2022)". If you would like to use this, please download the model checkpoints **latest_net_G.pth**, **res101.pth** from [here](https://drive.google.com/drive/folders/1VVkkPw_ubQ0A3052ErDK4PyDgT9hqfKJ?usp=sharing) and put them in [BoostingMonocularDepth/pix2pix/checkpoints/mergemodel](BoostingMonocularDepth/pix2pix/checkpoints/mergemodel). Then, run:
 
 ```
 python3 prepare_gt_depth.py <path-to-image-folder> <path-to-depth-save-folder>
