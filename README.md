@@ -10,9 +10,7 @@
 
 ---------------------------------------------------
 <p align="center" >
-  <video width="700" height="300" playsinline controls loop autoplay muted>
-    <source src="demo.mp4" type="video/mp4">
-  </video>
+  <img src="vid_garden.gif" alt="Ground Truth" width="100%" />
 </p>
 
 ## Environment Setups
