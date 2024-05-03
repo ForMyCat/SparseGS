@@ -105,7 +105,7 @@ There are a lot of arguments here, below is a cheat sheet. When lambda_* is set 
 
     # =========== Depth Warping Loss parms ===========
     self.lambda_reg = 0.0
-    self.warp_reg_start_itr = 4999
+    self.warp_reg_start_itr = 4999 # warping loss kicks in iteration
     # ================================================
 ```
 
@@ -122,7 +122,7 @@ python3 render.py --source_path ./data/kitchen --model_path ./output/kitchen_12_
 Please run the following script to evaluate your model. **--exclude_path** should point to your training data since they should be excluded when calculating metrics.
 
 ```
-python3 metrics.py -model_path ./output/kitchen_12_SparseGS --exclude_path ./data/kitchen_12
+python3 metrics.py --model_path ./output/kitchen_12_SparseGS --exclude_path ./data/kitchen_12
 ```
 
 ## Acknowledgement
