@@ -21,14 +21,12 @@ from tqdm import tqdm
 from utils.image_utils import psnr
 from argparse import ArgumentParser
 
-def readImages(renders_dir, gt_dir, exclude_dir, holdout_path, which_half):
+def readImages(renders_dir, gt_dir, exclude_dir, which_half):
     renders = []
     gts = []
     image_names = []
 
     exclude_fnames = [fname.split('.')[0] for fname in os.listdir(exclude_dir)]
-    if holdout_path is not None:
-        exclude_fnames.extend([fname.split('.')[0] for fname in os.listdir(holdout_path)])
 
     print(exclude_fnames)
     print('Render Dir:', renders_dir)
@@ -54,7 +52,7 @@ def readImages(renders_dir, gt_dir, exclude_dir, holdout_path, which_half):
         image_names.append(fname)
     return renders, gts, image_names
 
-def evaluate(model_paths, exclude_path, holdout_path):
+def evaluate(model_paths, exclude_path):
 
     full_dict = {}
     per_view_dict = {}
@@ -92,7 +90,7 @@ def evaluate(model_paths, exclude_path, holdout_path):
 
                 for i in range(2):
                     print("Half:", i)
-                    renders, gts, image_names = readImages(renders_dir, gt_dir, exclude_dir, holdout_path, i)
+                    renders, gts, image_names = readImages(renders_dir, gt_dir, exclude_dir, i)
                     image_namess.extend(image_names)
                     
 
@@ -138,6 +136,5 @@ if __name__ == "__main__":
     parser = ArgumentParser(description="Training script parameters")
     parser.add_argument('--model_paths', '-m', required=True, nargs="+", type=str, default=[])
     parser.add_argument('--exclude_path', '-e', type=str, default=None)
-    parser.add_argument('--forceout', '-f', type=str, default=None)
     args = parser.parse_args()
-    evaluate(args.model_paths, args.exclude_path, args.forceout)
+    evaluate(args.model_paths, args.exclude_path)
