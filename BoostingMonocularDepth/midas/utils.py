@@ -5,6 +5,7 @@ import re
 import numpy as np
 import cv2
 import torch
+import os
 
 
 def read_pfm(path):
@@ -173,8 +174,14 @@ def write_depth(path, depth, bits=1 , colored=False):
     # write_pfm(path + ".pfm", depth.astype(np.float32))
     if colored == True:
         bits = 1
-    # np.save(path + '.npy', depth)
-    np.save(path[:-4] + '.npy', depth)
+
+    path_name_split = path.split('.')
+    if len(path_name_split) > 2:
+        np.save('./' + path_name_split[1] + '.npy', depth)
+    else:
+        np.save(path + '.npy', depth)
+
+ 
 
 
 #     depth_min = depth.min()
