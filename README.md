@@ -78,7 +78,7 @@ data -- kitchen_12 -- images -- DSCF0656.JPG
 ## Training
 Train SparseGS:
 ``` 
-python3 train.py --source_path data/kitchen_12 --model_path output/kitchen_12_SparseGS --beta 5.0 --lambda_pearson 0.05 --lambda_local_pearson 0.15 --box_p 128 --p_corr 0.5 --lambda_diffusion 0.001 --step_ratio 0.99 --lambda_reg 0.1 --prune_sched 20000 --prune_perc 0.98 --prune_exp 7.5 --iterations 30000 --checkpoint_iterations 30000 -r 2
+python3 train.py --source_path data/kitchen_12 --model_path output/kitchen_12_SparseGS --beta 5.0 --lambda_pearson 0.05 --lambda_local_pearson 0.15 --box_p 128 --p_corr 0.5 --lambda_diffusion 0.001 --SDS_freq 0.1 --step_ratio 0.99 --lambda_reg 0.1 --prune_sched 20000 --prune_perc 0.98 --prune_exp 7.5 --iterations 30000 --checkpoint_iterations 30000 -r 2
 ``` 
 There are a lot of arguments here, below is a cheat sheet. When lambda_* is set to 0, the corresponding component is disabled. If prun_sched is not set, floater pruning is disabled.
 ```
@@ -98,12 +98,15 @@ There are a lot of arguments here, below is a cheat sheet. When lambda_* is set 
     self.prune_perc = 0.98 # higher is less aggresive
     # ================================================
 
-    # =============== Diffusion Params ===============
+    # ======== Diffusion(SDS Loss) Params ============
+    # Note: SDS Loss kicks in after two-thirds of the training iterations
+
     self.step_ratio = 0.95 # lower is more noisy, = 1 means no diffusion
     self.lambda_diffusion = 0.0
+    self.SDS_freq = 0.1 # SDS apply frequency, = 1 means every iteration
     # ================================================
 
-    # =========== Depth Warping Loss parms ===========
+    # =========== Depth Warping Loss Params ===========
     self.lambda_reg = 0.0
     self.warp_reg_start_itr = 4999 # warping loss kicks in iteration
     # ================================================

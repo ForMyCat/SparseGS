@@ -106,7 +106,7 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations, checkpoi
 
 
 
-        pick_diff_cam = ((randint(1, 10) <= 1) and dataset.lambda_diffusion and iteration > (opt.iterations*2/3))
+        pick_diff_cam = ((randint(1, 100) <= (args.SDS_freq*100)) and dataset.lambda_diffusion and iteration > (opt.iterations*2/3))
         if pick_diff_cam: # A diffusion cam is picked
             diff_pose = scene.getRandEllipsePose(viewpoint_idx, 0, z_variation=0)
             diff_cam.world_view_transform = torch.tensor(getWorld2View2(diff_pose[:3, :3].T, diff_pose[:3, 3], diff_cam.trans, diff_cam.scale)).transpose(0, 1).cuda()

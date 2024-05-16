@@ -77,6 +77,7 @@ class ModelParams(ParamGroup):
         # Diffusion Params
         self.step_ratio = 0.95
         self.lambda_diffusion = 0.0
+        self.SDS_freq = 0.1
 
         # Warp Reg parms
         self.lambda_reg = 0.0
